@@ -1,3 +1,4 @@
+//Copyright © 2017 Dell Inc. or its subsidiaries. All Rights Reserved.
 apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'org.sonarqube'
@@ -10,7 +11,7 @@ apply plugin: 'maven'
 
 sourceCompatibility = 1.8
 version = "${version}"
-group = 'com.dell.isg.smi'
+group = 'com.github.nortonluo'
 archivesBaseName = "commons-elm"
 ext.isReleaseVersion = !version.endsWith("SNAPSHOT")
 
