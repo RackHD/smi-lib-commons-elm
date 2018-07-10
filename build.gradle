@@ -1,3 +1,5 @@
+// Copyright © 2018 DELL Inc. or its subsidiaries.  All Rights Reserved.
+
 apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'org.sonarqube'
@@ -53,6 +55,11 @@ javadoc {
     options {
          encoding = 'windows-1251'
     }
+}
+
+task snapshotJar(type: Jar){
+    baseName =  archivesBaseName
+    version = '1.0-SNAPSHOT'
 }
 
 task sourcesJar(type: Jar) {
@@ -146,7 +153,7 @@ uploadArchives {
 }
 
 artifacts {
-    archives javadocJar, sourcesJar
+    archives javadocJar, sourcesJar, snapshotJar
 }
 
 signing {
